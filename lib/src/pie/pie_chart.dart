@@ -3,7 +3,6 @@ import 'dart:math';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:flutter_echart/src/e_data.dart';
 import 'package:flutter_echart/src/pie/pie_enum.dart';
 
 import '../e_chart_bean.dart';
