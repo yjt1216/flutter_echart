@@ -168,3 +168,8 @@ enum LoopType {
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201031094959816.gif#pic_center)
 
+# 版本适配
+
+
+* flutter version 3.0.5 ----> 2.1.0
+

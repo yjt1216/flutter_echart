@@ -189,7 +189,7 @@ class _PieChatState extends State<PieChatWidget> with TickerProviderStateMixin {
 
     if (widget.openType == OpenType.ANI) {
       if (WidgetsBinding.instance != null) {
-        WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+        WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
           PieLogUtils.logPrint("开始执行动画");
           _animationController.forward();
         });
@@ -361,7 +361,7 @@ class _PieChatState extends State<PieChatWidget> with TickerProviderStateMixin {
           currentSelect = value;
           PieLogUtils.logPrint("点击回调 $value");
 
-          SchedulerBinding.instance!.addPostFrameCallback((Duration timeStamp) {
+          SchedulerBinding.instance.addPostFrameCallback((Duration timeStamp) {
             PieLogUtils.logPrint("刷新 $_isUpdate");
             if (widget.isFrontgText && _isUpdate) {
               _isUpdate = false;

@@ -1,41 +1,31 @@
+/// FileName pie_demo
+///
+/// @Author yinjiangtao
+/// @Date 2023/10/8 09:12
+///
+/// @Description Pie demo
+///
 
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 import 'package:flutter_echart/flutter_echart.dart';
 
-/// 创建人： Created by zhaolong
-/// 创建时间：Created by  on 2020/11/24.
-///
-/// 可关注公众号：我的大前端生涯   获取最新技术分享
-/// 可关注网易云课堂：https://study.163.com/instructor/1021406098.htm
-/// 可关注博客：https://blog.csdn.net/zl18603543572
-/// 西瓜视频 https://www.ixigua.com/home/3662978423
-/// 知乎 https://www.zhihu.com/people/zhao-long-90-89
-///
-///代码清单
-///程序入口
-void main() {
-  //启动根目录
-  runApp(
-    MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: TestPieAnimationPage(),
-    ),
-  );
-}
-
-
 //定义一个全局的内容主颜色
-Color mainColor = Color(0xFFCADCED);
+Color mainColor = const Color(0xFFCADCED);
 
 ///默认显示的首页面
-class TestPieAnimationPage extends StatefulWidget {
+class PieAnimationPage extends StatefulWidget {
+  const PieAnimationPage({Key? key}) : super(key: key);
+
   @override
-  _TestPieAnimationPageState createState() => _TestPieAnimationPageState();
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return _PieAnimationPageState();
+  }
+
 }
 
-class _TestPieAnimationPageState extends State<TestPieAnimationPage> {
+class _PieAnimationPageState extends State<PieAnimationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,7 +53,7 @@ class _TestPieAnimationPageState extends State<TestPieAnimationPage> {
     );
   }
 
-  List<EChartPieBean> _dataList = [
+  final List<EChartPieBean> _dataList = [
     EChartPieBean(title: "生活费", number: 200, color: Colors.lightBlueAccent),
     EChartPieBean(title: "游玩费", number: 200, color: Colors.deepOrangeAccent),
     EChartPieBean(title: "交通费", number: 400, color: Colors.green),
